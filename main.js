@@ -1,0 +1,111 @@
+var express = require('express')
+var app = express()
+
+// respond with "hello world" when a GET request is made to the homepage
+app.post('/wxmi/homePageContent', function (req, res) {
+  // console.log(req);
+  var data={
+    data:{
+      slides:[
+        {
+          img:'http://pic39.nipic.com/20140307/13928177_195158772185_2.jpg'
+        },
+        {
+          img:'http://via.placeholder.com/350x150'
+        },
+        {
+          img:'http://via.placeholder.com/350x150'
+        }
+      ],
+      category:[
+        {
+          image:'http://via.placeholder.com/350x150',
+          mallCategoryName:"分类"
+        },
+        {
+          image:'http://via.placeholder.com/350x150',
+          mallCategoryName:"分类1"
+        },
+        {
+          image:'http://via.placeholder.com/350x150',
+          mallCategoryName:"分类2"
+        },
+        {
+          image:'http://via.placeholder.com/350x150',
+          mallCategoryName:"分类3"
+        },
+        {
+          image:'http://via.placeholder.com/350x150',
+          mallCategoryName:"分类4"
+        },
+        {
+          image:'http://via.placeholder.com/350x150',
+          mallCategoryName:"分类5"
+        },
+        {
+          image:'http://via.placeholder.com/350x150',
+          mallCategoryName:"分类6"
+        },
+        {
+          image:'http://via.placeholder.com/350x150',
+          mallCategoryName:"分类7"
+        },
+        {
+          image:'http://via.placeholder.com/350x150',
+          mallCategoryName:"分类8"
+        },
+        {
+          image:'http://via.placeholder.com/350x150',
+          mallCategoryName:"分类9"
+        },
+        {
+          image:'http://via.placeholder.com/350x150',
+          mallCategoryName:"分类10"
+        },
+        {
+          image:'http://via.placeholder.com/350x150',
+          mallCategoryName:"分类11"
+        }
+      ],
+      advertesPciture:{
+        PICTURE_ADDRESS:'http://via.placeholder.com/350x150'
+      },
+      shopInfo:{
+        leaderImage:'http://pic39.nipic.com/20140307/13928177_195158772185_2.jpg',
+        leaderPhone:'15900935595'
+      },
+      recomend:[
+        {
+          image:'http://pic44.nipic.com/20140727/18179070_152408117000_2.jpg',
+          price:'推荐商品1'
+        },
+        {
+          image:'http://pic44.nipic.com/20140727/18179070_152408117000_2.jpg',
+          price:'推荐商品1'
+        },
+        {
+          image:'http://pic44.nipic.com/20140727/18179070_152408117000_2.jpg',
+          price:'推荐商品1'
+        }
+      ],
+      floorPic:{
+        PICTURE_ADDRESS:'http://b-ssl.duitang.com/uploads/blog/201312/04/20131204184148_hhXUT.jpeg',
+        floorList:[
+          {
+            "image":'http://via.placeholder.com/350x150'
+          },{
+            "image":'http://via.placeholder.com/350x150'
+          },{
+            "image":'http://via.placeholder.com/350x150'
+          },{
+            "image":'http://via.placeholder.com/350x150'
+          },
+        ]
+      }
+    }
+  }
+
+  res.send(JSON.stringify(data));
+})
+console.log('listen 8080')
+app.listen(8080)
